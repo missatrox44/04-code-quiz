@@ -55,6 +55,9 @@ Stepp 4
 
 * I got stuff from here
 
+## Wireframe
+![Wireframe](./assets/images/wireframe.png)<br><br>
+
 ## MIT License
 
 Copyright (c) 2022 Sara Baqla
