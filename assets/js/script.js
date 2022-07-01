@@ -11,16 +11,16 @@
     //display input fo rmy user to type name
     //second hTML and dispaly username and score -read object from local storage
 
-
-var timerEl = document.getElementById("timer");
+var startBtn = document.getElementById('start-btn');
+var timerEl = document.getElementById('timer');
 var timeLeft = 61;
 var startTimer;
-
-
-
-var welcomeEl = document.getElementsByClassName(".welcome");
-var gameEl = document.getElementsByClassName(".play-game")
-
+var welcomeEl = document.getElementsByClassName('welcome-screen');
+var gameEl = document.getElementsByClassName('question-display');
+var bt1 = document.getElementById('answer1');
+var bt2 = document.getElementById('answer2');
+var bt3 = document.getElementById('answer3');
+var bt4 = document.getElementById('answer4');
 
 var questions = [
     {
@@ -31,17 +31,17 @@ var questions = [
     {
         title: "Question will go in here 2",
         choices: ["answer1", "answer2", "answer3", "answer4"],
-        answer: "answer2"
+        answer: "answer4"
     },
     {
         title: "Question will go in here 3",
         choices: ["answer1", "answer2", "answer3", "answer4"],
-        answer: "answer2"
+        answer: "answer1"
     },
     {
         title: "Question will go in here 4",
         choices: ["answer1", "answer2", "answer3", "answer4"],
-        answer: "answer2"
+        answer: "answer3"
     },
     {
         title: "Question will go in here 5",
@@ -51,12 +51,12 @@ var questions = [
     {
         title: "Question will go in here 6",
         choices: ["answer1", "answer2", "answer3", "answer4"],
-        answer: "answer2"
+        answer: "answer3"
     },
     {
         title: "Question will go in here 7",
         choices: ["answer1", "answer2", "answer3", "answer4"],
-        answer: "answer2"
+        answer: "answer4"
     },
     {
         title: "Question will go in here 8",
@@ -66,7 +66,7 @@ var questions = [
     {
         title: "Question will go in here 9",
         choices: ["answer1", "answer2", "answer3", "answer4"],
-        answer: "answer2"
+        answer: "answer1"
     },
     {
         title: "Question will go in here 10",
@@ -75,22 +75,35 @@ var questions = [
     },
 ]
 
+startBtn.addEventListener('click', startGame);
+
+function startGame(){
+    welcomeEl.setAttribute('style', 'display: hidden');
+    gameEl.setAttribute('style', 'display: block;');
+    //start timerFunction
+startTimer = setInterval(timer(), 1000)
+timerEl.innerHTML = timeLeft;
+}
+
 function timer(){
 //start when addeventLister clicks start button
     timeLeft--;
     timerEl.innerHTML = timeLeft;
-
 //-10 seconds if answer incorrect
+    if (timeLeft === 0){
+        gameOver();
+    }
 //continue to countdown normally if correct
 //if timer === 0, call gameOver Function
 }
 
 
-function playGame(){
-//start timerFunction
-startTimer = setInterval(timer(), 1000)
-timerEl.innerHTML = timeLeft;
+
 //if answer all questions, call gameOverFunction
+
+
+function getQuestions (){
+
 }
 
 function gameOver(){
