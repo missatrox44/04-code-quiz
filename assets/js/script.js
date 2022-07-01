@@ -11,9 +11,16 @@
     //display input fo rmy user to type name
     //second hTML and dispaly username and score -read object from local storage
 
+
+var timerEl = document.getElementById("timer");
+var timeLeft = 61;
+var startTimer;
+
+
+
 var welcomeEl = document.getElementsByClassName(".welcome");
 var gameEl = document.getElementsByClassName(".play-game")
-var timeLeft = 60;
+
 
 var questions = [
     {
@@ -70,7 +77,10 @@ var questions = [
 
 function timer(){
 //start when addeventLister clicks start button
-//-5 seconds if answer incorrect
+    timeLeft--;
+    timerEl.innerHTML = timeLeft;
+
+//-10 seconds if answer incorrect
 //continue to countdown normally if correct
 //if timer === 0, call gameOver Function
 }
@@ -78,6 +88,8 @@ function timer(){
 
 function playGame(){
 //start timerFunction
+startTimer = setInterval(timer(), 1000)
+timerEl.innerHTML = timeLeft;
 //if answer all questions, call gameOverFunction
 }
 
@@ -85,3 +97,8 @@ function gameOver(){
 //takes info from localstorage to display score
 //link to high school page?
 }
+
+//use set attribute to hide and reveal 
+//or remove attr
+
+//
