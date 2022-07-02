@@ -14,14 +14,14 @@
 
 var timerEl = document.getElementById('timer');
 var timeLeft = 61;
-var startTimer;
 var welcomeEl = document.querySelector('#welcome-screen');
 var startBtn = document.querySelector('#start-btn');   
 var gameEl = document.querySelector('#question-display');
-var bt1 = document.getElementById('answer1');
-var bt2 = document.getElementById('answer2');
-var bt3 = document.getElementById('answer3');
-var bt4 = document.getElementById('answer4');
+var actualQuestion = document.querySelector('#actual-question');
+var bt1 = document.querySelector('#answer1');
+var bt2 = document.querySelector('#answer2');
+var bt3 = document.querySelector('#answer3');
+var bt4 = document.querySelector('#answer4');
 
 var questions = [
     {
@@ -82,6 +82,7 @@ function startGame(){
     startTimer();
 welcomeEl.setAttribute('class', 'hidden');
 gameEl.setAttribute('class', 'show');
+document.getElementById('actual-question').innerHTML = 'question here'
 }
 
 function startTimer(){
@@ -100,6 +101,7 @@ function startTimer(){
 
 
 function getQuestions (){
+//modify actualQuestions from questions Array
 
 }
 
@@ -108,7 +110,3 @@ function gameOver(){
 //link to high school page?
 }
 
-//use set attribute to hide and reveal 
-//or remove attr
-
-//
