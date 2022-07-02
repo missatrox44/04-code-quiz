@@ -16,10 +16,8 @@ var timerEl = document.getElementById('timer');
 var timeLeft = 61;
 var startTimer;
 var welcomeEl = document.querySelector('#welcome-screen');
-    var startBtn = document.querySelector('#start-btn');
-    var gameEl = document.getElementsByClassName('question-display');
-
-
+var startBtn = document.querySelector('#start-btn');   
+var gameEl = document.querySelector('#question-display');
 var bt1 = document.getElementById('answer1');
 var bt2 = document.getElementById('answer2');
 var bt3 = document.getElementById('answer3');
@@ -81,25 +79,21 @@ var questions = [
 startBtn.addEventListener('click', startGame);
 
 function startGame(){
+    startTimer();
 welcomeEl.setAttribute('class', 'hidden');
-gameEl.setAttribute('class', ' ');
-    // start timerFunction
-startTimer = setInterval(timer(), 1000)
-timerEl.innerHTML = timeLeft;
+gameEl.setAttribute('class', 'show');
 }
 
-function timer(){
-//start when addeventLister clicks start button
-    timeLeft--;
-    timerEl.innerHTML = timeLeft;
-//-10 seconds if answer incorrect
-    if (timeLeft === 0){
+function startTimer(){
+    timer = setInterval(function() {
+        timeLeft--;
+        timerEl.textContent = timeLeft;
+        if (timeLeft === 0){
+        clearInterval(timer);
         gameOver();
-    }
-//continue to countdown normally if correct
-//if timer === 0, call gameOver Function
+         }
+    } , 1000);
 }
-
 
 
 //if answer all questions, call gameOverFunction
