@@ -1,34 +1,4 @@
-# 04-code-quiz - Rough Draft
-
-## User Story
-
-```
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
-
-## Acceptance Criteria
-
-```
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and my score
-```
-
-## Mock-Up
-
-The following animation demonstrates the application functionality:
-
-![A user clicks through an interactive coding quiz, then enters initials to save the high score before resetting and starting over.](./Assets/04-web-apis-homework-demo.gif)
+# 04-code-quiz 
 
 ## Deployed Website
 
@@ -36,24 +6,21 @@ The following animation demonstrates the application functionality:
 
 ---
 ## How it works
-Step1
-![Step-1 Screenshot]()<br><br>
-Step2
-![Step-2 Screenshot]()<br><br>
-Step 3
-![Step-3 Screenshot]()<br><br>
-Stepp 4
-![Step-4 Screenshot]()<br><br>
+User is presented with landing page and must click 'Start Quiz' to begin playing.
+![Step-1 Screenshot](./assets/images/quiz-step-1.png)<br><br>
+User will be presented with a question and four answer choices. If the user chooses the correct answer, the next question is presented. If the user chooses an incorrect answer, 10 seconds will be deducted from the timer. 
+![Step-2 Screenshot](./assets/images/quiz-step-2.png)<br><br>
+The game will end when the time has run out or all questions were correctly answered.
 
 ## Bugs
+* Loop through questions
+* Check user answer choice against correct answer
+* High Scores not saved to local storage
 
-* Hopefully none
-
-## Collaborators
-
-## Resources
-
-* I got stuff from here
+## Second Pair of Eyes
+[Chelsea Sexton](https://github.com/chelsea314)<br>
+[Brian Lalli](https://github.com/BrianLalli)<br>
+[Andrew Edwards](https://github.com/Andrew87E) <br>
 
 ## Wireframe
 ![Wireframe](./assets/images/wireframe.png)<br><br>

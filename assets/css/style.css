@@ -40,9 +40,13 @@ a {
 }
 main {
     border: 3px solid #2a7c3e;
-    width: fit-content;
+    width: 500px;
     margin: 100px 400px;
     padding: 10px;
+}
+
+button {
+    margin: 10px;
 }
 
 /* Class Selectors */
@@ -66,6 +70,12 @@ main {
     margin-right: 25px;
     margin-top: 25px;
 }
+
+.question {
+padding:25px;
+}
+
+
 /* ID Selectors */
 
 /* Media Queries */

@@ -1,17 +1,4 @@
-//landing page with start button, high score page link, 0timer
-//when start button is clicked, remove welcome message and append question 1
-    //addeventlistenr to button
-        //activity12
-//start timer
-//user answers question-readchosen element, data value, compare to answer key
-//if correct, next question
-//if incorrect, subtract 10 seconds from timer
-//end of quiz
-    //add up uswer score
-    //display input fo rmy user to type name
-    //second hTML and dispaly username and score -read object from local storage
-
-
+//global variables
 var timerEl = document.getElementById('timer');
 var timeLeft = 61;
 var welcomeEl = document.querySelector('#welcome-screen');
@@ -76,13 +63,23 @@ var questions = [
     },
 ]
 
+//when strt btn clicked, 1st question revealed, remove welcome message
 startBtn.addEventListener('click', startGame);
 
 function startGame(){
     startTimer();
 welcomeEl.setAttribute('class', 'hidden');
 gameEl.setAttribute('class', 'show');
-document.getElementById('actual-question').innerHTML = 'question here'
+//access question array and rotate through with for loop
+document.getElementById('actual-question').innerHTML = questions[0].title;
+document.getElementById('answer1').innerHTML = questions[0].choices[0];
+document.getElementById('answer2').innerHTML = questions[0].choices[1];
+document.getElementById('answer3').innerHTML = questions[0].choices[2];
+document.getElementById('answer4').innerHTML = questions[0].choices[3];
+
+//user answers question-readchosen element, data value, compare to answer key
+//choose correct answer, display next question
+//incorrect answer -10 seconds from timeLeft -=10
 }
 
 function startTimer(){
@@ -109,4 +106,9 @@ function gameOver(){
 //takes info from localstorage to display score
 //link to high school page?
 }
+
+//end of quiz
+    //add up uswer score
+    //display input fo rmy user to type name
+    //second hTML and dispaly username and score -read object from local storage
 
