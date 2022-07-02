@@ -11,12 +11,15 @@
     //display input fo rmy user to type name
     //second hTML and dispaly username and score -read object from local storage
 
-var startBtn = document.getElementById('start-btn');
+
 var timerEl = document.getElementById('timer');
 var timeLeft = 61;
 var startTimer;
-var welcomeEl = document.getElementsByClassName('welcome-screen');
-var gameEl = document.getElementsByClassName('question-display');
+var welcomeEl = document.querySelector('#welcome-screen');
+    var startBtn = document.querySelector('#start-btn');
+    var gameEl = document.getElementsByClassName('question-display');
+
+
 var bt1 = document.getElementById('answer1');
 var bt2 = document.getElementById('answer2');
 var bt3 = document.getElementById('answer3');
@@ -78,9 +81,9 @@ var questions = [
 startBtn.addEventListener('click', startGame);
 
 function startGame(){
-    welcomeEl.setAttribute('style', 'display: hidden');
-    gameEl.setAttribute('style', 'display: block;');
-    //start timerFunction
+welcomeEl.setAttribute('class', 'hidden');
+gameEl.setAttribute('class', ' ');
+    // start timerFunction
 startTimer = setInterval(timer(), 1000)
 timerEl.innerHTML = timeLeft;
 }
