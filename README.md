@@ -17,10 +17,11 @@ The game will end when the time has run out or all questions were correctly answ
 * Check user answer choice against correct answer
 * High Scores not saved to local storage
 
-## Second Pair of Eyes
-[Chelsea Sexton](https://github.com/chelsea314)<br>
-[Brian Lalli](https://github.com/BrianLalli)<br>
-[Andrew Edwards](https://github.com/Andrew87E) <br>
+## Collaborators
+[Chelsea Sexton](https://github.com/chelsea314) - Start Button and getQuestions Function<br>
+[Kyle Baca](https://github.com/kyle-david1)<br>
+[Roberto Moreno](https://github.com/rmoreno162303)
+[Adam Wagh]()
 
 ## Wireframe
 ![Wireframe](./assets/images/wireframe.png)<br><br>
